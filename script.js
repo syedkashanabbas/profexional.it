@@ -181,3 +181,34 @@ gsap.from("#newsletter .bg-teal-900", {
     start: "top 80%",
   }
 });
+
+
+// Animate Services Heading
+gsap.fromTo("#services-heading", 
+  { y: 80, opacity: 0 }, 
+  { y: 0, opacity: 1, duration: 1.4, ease: "power4.out",
+    scrollTrigger: {
+      trigger: "#services",
+      start: "top 80%"
+    }
+  }
+);
+
+// Cinematic Service Cards Reveal (custom order)
+const serviceCards = document.querySelectorAll(".service-card");
+
+// Custom order: 1 -> 4 -> 3 -> 2
+const customOrder = [0, 3, 2, 1]; 
+
+customOrder.forEach((index, i) => {
+  const card = serviceCards[index];
+  gsap.fromTo(card, 
+    { y: 100, opacity: 0, scale: 0.9 }, 
+    { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power4.out", delay: i * 0.3,
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top 75%"
+      }
+    }
+  );
+});

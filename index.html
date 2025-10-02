@@ -146,7 +146,7 @@
   <div class="max-w-7xl mx-auto">
     
     <!-- Section Heading -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-16 opacity-0" id="services-heading">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
         Our Core Services
       </h2>
@@ -159,9 +159,9 @@
     <!-- Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-16 gap-x-12">
       
-      <!-- Service 1 -->
-      <div class="flex flex-col items-start space-y-4">
-        <img src="assets/svgs/electricity.svg" alt="IT Solutions" class="w-10 h-10 text-teal-700">
+      <!-- Service Card 1 -->
+      <div class="service-card flex flex-col items-start space-y-4 opacity-0">
+        <img src="assets/svgs/electricity.svg" alt="IT Solutions" class="w-10 h-10">
         <h3 class="text-2xl font-semibold text-gray-900">IT Solutions</h3>
         <p class="text-gray-600 text-base leading-relaxed">
           Comprehensive IT services, from small-scale projects to enterprise-grade 
@@ -169,9 +169,9 @@
         </p>
       </div>
 
-      <!-- Service 2 -->
-      <div class="flex flex-col items-start space-y-4">
-        <img src="assets/svgs/handshake.svg" alt="Infrastructure" class="w-10 h-10 text-teal-700">
+      <!-- Service Card 2 -->
+      <div class="service-card flex flex-col items-start space-y-4 opacity-0">
+        <img src="assets/svgs/handshake.svg" alt="Infrastructure" class="w-10 h-10">
         <h3 class="text-2xl font-semibold text-gray-900">Infrastructure</h3>
         <p class="text-gray-600 text-base leading-relaxed">
           High-level expertise in digital infrastructure, networks, and cloud systems, 
@@ -179,9 +179,9 @@
         </p>
       </div>
 
-      <!-- Service 3 -->
-      <div class="flex flex-col items-start space-y-4">
-        <img src="assets/svgs/camera.svg" alt="Security" class="w-10 h-10 text-teal-700">
+      <!-- Service Card 3 -->
+      <div class="service-card flex flex-col items-start space-y-4 opacity-0">
+        <img src="assets/svgs/camera.svg" alt="Security" class="w-10 h-10">
         <h3 class="text-2xl font-semibold text-gray-900">Security</h3>
         <p class="text-gray-600 text-base leading-relaxed">
           Reliable cybersecurity and IT security solutions, focusing on 
@@ -189,9 +189,9 @@
         </p>
       </div>
 
-      <!-- Service 4 -->
-      <div class="flex flex-col items-start space-y-4">
-        <img src="assets/svgs/world.svg" alt="Digital Transformation" class="w-10 h-10 text-teal-700">
+      <!-- Service Card 4 -->
+      <div class="service-card flex flex-col items-start space-y-4 opacity-0">
+        <img src="assets/svgs/world.svg" alt="Digital Transformation" class="w-10 h-10">
         <h3 class="text-2xl font-semibold text-gray-900">Digital Transformation</h3>
         <p class="text-gray-600 text-base leading-relaxed">
           Innovative solutions that help companies adapt to the digital era — 
@@ -202,6 +202,7 @@
     </div>
   </div>
 </section>
+
 
 <section id="benefits" class="py-24 px-6 md:px-16 bg-teal-30">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -364,9 +365,9 @@
               →
             </button>
           </div>
-   <p class="mt-3 text-sm text-teal-100">
-  We’ll get in touch with you and share the latest updates, news, and insights from Profexional IT Group.
-</p>
+            <p class="mt-3 text-sm text-teal-100">
+            We’ll get in touch with you and share the latest updates, news, and insights from Profexional IT Group.
+            </p>
 
         </form>
       </div>
@@ -374,6 +375,76 @@
   </div>
 </section>
 
+
+<footer class="bg-white mt-5">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+    
+    <!-- Logo + Intro -->
+    <div>
+      <div class="flex items-center space-x-2 mb-4">
+        <img src="assets/img/logo.png" alt="Profexional IT Group" class="h-15 w-auto">
+     
+      </div>
+      <p class="text-gray-600 mb-6">
+        Let’s connect and create something impactful together.  
+        Have a question, idea, or just want to say hello?  
+        Send us a message — we’ll respond as quickly as we can.  
+      </p>
+      <a href="#contact" class="inline-block px-6 py-3 bg-teal-900 text-white rounded-full font-semibold hover:bg-teal-800 transition">
+        Contact us
+      </a>
+    </div>
+
+    <!-- About Links -->
+    <div>
+      <h4 class="text-lg font-semibold text-gray-900 mb-4">About us</h4>
+      <ul class="space-y-3 text-gray-600">
+        <li><a href="#about" class="hover:text-teal-800">About Profexional IT</a></li>
+        <li><a href="#career" class="hover:text-teal-800">Careers</a></li>
+        <li><a href="#sustainability" class="hover:text-teal-800">Sustainability</a></li>
+        <li><a href="#partners" class="hover:text-teal-800">Our Partners</a></li>
+        <li><a href="#academy" class="hover:text-teal-800">IT Academy</a></li>
+        <li><a href="#future" class="hover:text-teal-800">Profexional Future</a></li>
+      </ul>
+    </div>
+
+    <!-- Investor / Clients -->
+    <div>
+      <h4 class="text-lg font-semibold text-gray-900 mb-4">Clients & Investors</h4>
+      <ul class="space-y-3 text-gray-600">
+        <li><a href="#investor" class="hover:text-teal-800">Investor Relations</a></li>
+        <li><a href="#reports" class="hover:text-teal-800">Reports</a></li>
+        <li><a href="#governance" class="hover:text-teal-800">Corporate Governance</a></li>
+        <li><a href="#calendar" class="hover:text-teal-800">Events & Calendar</a></li>
+        <li><a href="#connect" class="hover:text-teal-800">Client Portal</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h4 class="text-lg font-semibold text-gray-900 mb-4">Follow us</h4>
+      <ul class="space-y-3 text-gray-600">
+        <li><a href="#" class="hover:text-teal-800">LinkedIn</a></li>
+        <li><a href="#" class="hover:text-teal-800">Facebook</a></li>
+        <li><a href="#" class="hover:text-teal-800">Instagram</a></li>
+        <li><a href="#" class="hover:text-teal-800">Twitter</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-gray-200 mt-8">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 space-y-4 md:space-y-0">
+      <p>Copyright © 2025 Profexional IT Group. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="#cookies" class="hover:text-teal-800">Cookies</a>
+        <a href="#privacy" class="hover:text-teal-800">Privacy Policy</a>
+        <a href="#whistleblowing" class="hover:text-teal-800">Whistleblowing</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
   <!-- GSAP -->
