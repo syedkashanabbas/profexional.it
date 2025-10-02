@@ -89,3 +89,36 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
     gsap.to(window, { duration: 1, scrollTo: this.getAttribute("href"), ease: "power2.inOut" });
   });
 });
+
+
+// Accordion functionality with GSAP
+// Accordion functionality with GSAP
+const accordions = document.querySelectorAll(".accordion-btn");
+
+accordions.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector(".accordion-icon");
+
+    if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+      // Close this
+      gsap.to(content, { maxHeight: 0, duration: 0.5, ease: "power2.inOut" });
+      icon.textContent = "↓";
+    } else {
+      // Close all others
+      document.querySelectorAll(".accordion-content").forEach(c => {
+        gsap.to(c, { maxHeight: 0, duration: 0.5, ease: "power2.inOut" });
+      });
+      document.querySelectorAll(".accordion-icon").forEach(i => i.textContent = "↓");
+
+      // Open this with auto height
+      gsap.to(content, { 
+        maxHeight: content.scrollHeight + "px", 
+        duration: 0.6, 
+        ease: "power2.inOut" 
+      });
+      icon.textContent = "↑";
+    }
+  });
+});
+
