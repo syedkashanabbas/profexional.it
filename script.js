@@ -22,8 +22,16 @@ closeBtn.addEventListener("click", () => {
 });
 
 // GSAP animations
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin,ScrollSmoother);
 
+
+ScrollSmoother.create({
+  wrapper: "#smooth-wrapper",
+  content: "#smooth-content",
+  smooth: 1.2,         // how smooth (1 = normal, higher = smoother)
+  effects: true,       // allows you to do parallax effects
+  normalizeScroll: true,
+});
 // Hero cinematic intro
 gsap.fromTo("#hero-heading",
   { x: -100, opacity: 0 },
