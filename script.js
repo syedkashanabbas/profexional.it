@@ -122,3 +122,17 @@ accordions.forEach(btn => {
   });
 });
 
+
+// Story Section Animation
+gsap.from("#story", {
+  y: 80,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#story",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  }
+});
+
