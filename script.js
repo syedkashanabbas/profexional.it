@@ -171,3 +171,13 @@ gsap.utils.toArray(".news-card").forEach((card, i) => {
     }
   );
 });
+gsap.from("#newsletter .bg-teal-900", {
+  y: 100,
+  opacity: 0,
+  duration: 1.4,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#newsletter",
+    start: "top 80%",
+  }
+});
