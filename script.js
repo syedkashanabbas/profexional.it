@@ -136,3 +136,38 @@ gsap.from("#story", {
   }
 });
 
+
+gsap.fromTo("#news-heading",
+  { y: 40, opacity: 0 },
+  {
+    y: 0, opacity: 1, duration: 1, ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#news",
+      start: "top 80%",
+    }
+  }
+);
+
+gsap.fromTo("#news-link",
+  { y: 40, opacity: 0 },
+  {
+    y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.3,
+    scrollTrigger: {
+      trigger: "#news",
+      start: "top 80%",
+    }
+  }
+);
+
+gsap.utils.toArray(".news-card").forEach((card, i) => {
+  gsap.fromTo(card,
+    { y: 60, opacity: 0 },
+    {
+      y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: i * 0.2,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+      }
+    }
+  );
+});
