@@ -7,6 +7,19 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("nav-scrolled");
   }
 });
+// GSAP Menu animation
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-menu");
+const mobileMenu = document.getElementById("mobile-menu");
+
+
+menuBtn.addEventListener("click", () => {
+  gsap.to(mobileMenu, { x: 0, duration: 0.6, ease: "power4.out" });
+});
+
+closeBtn.addEventListener("click", () => {
+  gsap.to(mobileMenu, { x: "100%", duration: 0.6, ease: "power4.in" });
+});
 
 // GSAP animations
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);

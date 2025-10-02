@@ -17,78 +17,131 @@
 <body class="font-poppins bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-500 bg-transparent">
-    <div class="container mx-auto flex items-center justify-between px-6 py-4">
-      <div class="text-2xl font-bold text-white">profexional.it</div>
-      <nav class="hidden md:flex space-x-8 font-medium">
-        <a href="#" class="text-white hover:text-gray-200">Business areas</a>
-        <a href="#" class="text-white hover:text-gray-200">About us</a>
-        <a href="#" class="text-white hover:text-gray-200">Our companies</a>
-        <a href="#" class="text-white hover:text-gray-200">Current events</a>
-      </nav>
-      <div>
-        <a href="#" class="text-white font-semibold mr-6">Investor</a>
-        <a href="#" class="px-4 py-2 bg-teal-900 text-white rounded-full hover:bg-teal-800">Contact us</a>
-      </div>
+<header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-500 bg-transparent">
+  <div class="container mx-auto flex items-center justify-between px-6 py-4">
+    <div class="text-2xl font-bold text-white">profexional.it</div>
+    
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="#" class="text-white hover:text-gray-200">Business areas</a>
+      <a href="#" class="text-white hover:text-gray-200">About us</a>
+      <a href="#" class="text-white hover:text-gray-200">Our companies</a>
+      <a href="#" class="text-white hover:text-gray-200">Current events</a>
+    </nav>
+    <div class="hidden md:flex">
+
+      <a href="#" id="contact_btn_nav" class="px-4 py-2 bg-teal-900  rounded-full hover:bg-teal-800">Contact us</a>
     </div>
-  </header>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-teal-50 shadow-2xl z-50 transform translate-x-full">
+  <div class="flex justify-between items-center p-6 border-b">
+    <div class="text-2xl font-bold">profexional.it</div>
+    <button id="close-menu" class="text-3xl">&times;</button>
+  </div>
+  <nav class="flex flex-col p-6 space-y-6 text-lg font-medium text-gray-800">
+    <a href="#">Affärsområden</a>
+    <a href="#">Om oss</a>
+    <a href="#">Våra bolag</a>
+    <a href="#">Aktuellt</a>
+    <a href="#">Investerare</a>
+    <a href="#">Kontakta oss</a>
+    <div class="border-t pt-4">
+      <p class="text-sm text-gray-500 mb-2">Följ oss</p>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Vimeo</a>
+    </div>
+  </nav>
+</div>
+
+
 
   <!-- Hero Section -->
-  <section class="relative h-screen flex items-center pl-12 md:pl-24 text-left text-white"
-           style="background: url('https://www.sparcgroup.se/img/containers/assets/hero-sparc-group.jpg/dd4602493814d7d42b3566a3fe780846/hero-sparc-group.webp') no-repeat center center/cover;">
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-    <div class="relative z-10 max-w-3xl">
-      <h1 id="hero-heading" class="text-6xl md:text-8xl font-bold mb-8 leading-tight opacity-0">
-        We install for a sustainable future
-      </h1>
-      <div id="hero-button" class="opacity-0">
-        <a href="#about"
-           class="inline-flex items-center px-8 py-4 bg-teal-900 rounded-full font-semibold text-xl hover:bg-teal-800">
-          Watch the movie
-          <span class="ml-2">▶</span>
-        </a>
-      </div>
-      <p id="hero-subtext" class="mt-10 text-2xl font-medium max-w-xl opacity-0">
-        By entrepreneurs, for entrepreneurs.
-      </p>
-      <a href="#about" id="hero-discover" class="absolute bottom-8 text-base font-semibold opacity-0">
-        Discover more ↓
+<section class="relative h-screen flex items-center justify-center md:justify-start px-6 md:px-24 text-left text-white"
+  style="background: url('https://www.sparcgroup.se/img/containers/assets/hero-sparc-group.jpg/dd4602493814d7d42b3566a3fe780846/hero-sparc-group.webp') no-repeat center center/cover;">
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl text-center md:text-left">
+    <!-- Heading -->
+    <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight opacity-0">
+      We install for a sustainable future
+    </h1>
+
+    <!-- Button -->
+    <div id="hero-button" class="opacity-0">
+      <a href="#about"
+        class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-teal-900 rounded-full font-semibold text-lg sm:text-xl hover:bg-teal-800 transition">
+        Watch the movie
+        <span class="ml-2">▶</span>
       </a>
     </div>
-  </section>
+
+    <!-- Subtext -->
+    <p id="hero-subtext"
+      class="mt-6 sm:mt-10 text-lg sm:text-xl md:text-2xl font-medium max-w-xl mx-auto md:mx-0 opacity-0">
+      By entrepreneurs, for entrepreneurs.
+    </p>
+
+    <!-- Discover More -->
+    <a href="#about" id="hero-discover"
+      class="absolute bottom-6 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 text-sm sm:text-base font-semibold opacity-0">
+      Discover more ↓
+    </a>
+  </div>
+</section>
+
 
 <section id="about" class="py-20 px-6 md:px-12">
-  <div class="bg-teal-50 rounded-2xl p-10 md:p-16 flex flex-col md:flex-row justify-between items-center gap-10">
-    <!-- Left Text -->
-    <div class="md:w-1/2">
-      <p id="about-text" class="text-lg md:text-xl leading-relaxed text-gray-800 opacity-0">
-        Profexional It Group is an entrepreneurial group that acquires, develops 
-        and coordinates companies to together create a comprehensive offering 
-        in the installation industry.
+  <div class="bg-teal-50 rounded-2xl p-10 md:p-16 min-h-[500px] md:min-h-[600px] flex flex-col md:flex-row justify-between items-center gap-12">
+    
+    <!-- Left Content -->
+    <div class="md:w-1/2 space-y-6 text-center md:text-left">
+      <!-- Section Heading -->
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        About Profexional IT Group
+      </h2>
+
+      <!-- Paragraph -->
+      <p id="about-text" class="text-base sm:text-lg md:text-xl leading-relaxed text-gray-700 opacity-0">
+      Profexional IT Group is an entrepreneurial organization dedicated to building sustainable growth by acquiring, developing, and coordinating companies within the installation and technology sector. With a forward-looking mindset, we bring together diverse expertise and innovative solutions under one umbrella, creating synergies that deliver lasting value.
+
       </p>
     </div>
 
     <!-- Right Stats -->
-    <div class="md:w-1/2 grid grid-cols-2 gap-10 text-center md:text-left">
+    <div class="md:w-1/2 grid grid-cols-2 gap-8 sm:gap-12 text-center md:text-left">
       <div>
-        <h3 class="text-4xl font-bold text-gray-900 counter" data-target="70">0</h3>
-        <p class="mt-2 text-gray-600">Subsidiaries</p>
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 counter" data-target="70">0</h3>
+        <p class="mt-2 text-gray-600 text-sm sm:text-base">Subsidiaries</p>
       </div>
       <div>
-        <h3 class="text-4xl font-bold text-gray-900 counter" data-target="1000">0</h3>
-        <p class="mt-2 text-gray-600">Employees</p>
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 counter" data-target="1000">0</h3>
+        <p class="mt-2 text-gray-600 text-sm sm:text-base">Employees</p>
       </div>
       <div>
-        <h3 class="text-4xl font-bold text-gray-900 counter" data-target="2.5">0</h3>
-        <p class="mt-2 text-gray-600">Turnover SEK billion</p>
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 counter" data-target="2.5">0</h3>
+        <p class="mt-2 text-gray-600 text-sm sm:text-base">Turnover SEK billion</p>
       </div>
       <div>
-        <h3 class="text-4xl font-bold text-gray-900 counter" data-target="2021">0</h3>
-        <p class="mt-2 text-gray-600">The company was founded</p>
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 counter" data-target="2021">0</h3>
+        <p class="mt-2 text-gray-600 text-sm sm:text-base">The company was founded</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
   <!-- GSAP -->
